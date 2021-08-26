@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Sriracha&display=swap');
+
+:root {
+    font-size: 2em;
+    --picAnimTlX: 0;
+    --picAnimTlY: 0;
+    --picAnimSc: 70vh;
+    --picAnimOp: 1;
+}
+
+::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff416a;
+    border-radius: 25px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: linear-gradient(to bottom, rgba(242,162,169,1) 0%, rgba(242,99,99,1) 100%);
+}
+
+.title {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+    font-size: 2rem;
+    color: #F26363;
+}
+
+.pic {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic img {
+    position: fixed;
+    height: var(--picAnimSc);
+    /* transition: opacity 0.3s ease-out; */
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 15px 15px 40px -6px rgba(0,0,0,0.75);
+}
+
+.container2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #F26363;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 2em;
+    flex-direction: column;
+}
+
+.container2 p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    max-width: 50vw;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    color: #36191A;
+}
+
+.container3 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(242,162,169,1) 0%, rgba(242,99,99,1) 100%);
+}
+
+.spotify {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.spotify :nth-child(odd) {
+    width: 35%;
+}
+
+.spotify :nth-child(even) {
+    width: 40%;
+    border-radius: 50px;
+}
+
+.container4 {
+    height: 300vh;
+    background: linear-gradient(to bottom, #f2a2a9 0%, #7209b7 100%);
+}
+
+.minecraft {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.minecraft h2 {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1.3rem;
+    height: 10%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.mPics {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+
+.mPics img {
+    width: 80%;
+}
+
+.primary,
+.secondary {
+    box-shadow: 15px 15px 25px 3px #00000050;
+}
+
+.container5 {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #f72585;
+}
+
+.container5 h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 70%;
+    height: max-content;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.container5 svg {
+    transform: rotate(180deg) scale(1.1);
+    fill: #7209b7;
+}
+
+.container6 {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(114,9,183,1) 0%, rgba(58,12,163,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container6 h2 {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    width: 80%;
+    text-align: center;
+    height: max-content;
+}
+
+.container6 svg {
+    transform: rotate(180deg) scale(1.1);
+    fill: #f72585;
+}
+
+@media (max-width: 1200px) {
+    .spotify {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .spotify :nth-child(odd) {
+        min-width: 30vw;
+        height: auto;
+        max-height: 70%;
+    }
+
+    .spotify :nth-child(even) {
+        min-width: 30vw;
+        max-height: 20%;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 1.5em;
+    }
+
+    .spotify :nth-child(odd) {
+        min-width: 50vw;
+        height: auto;
+        max-height: 70%;
+    }
+
+    .spotify :nth-child(even) {
+        min-width: 50vw;
+        max-height: 20%;
+    }
+
+    .container4 {
+        height: 200vh;
+    }
+
+    .container5 {
+        gap: 1rem;
+    }
+
+    .container5 h2 {
+        margin: auto;
+    }
+
+    .container6 h2 {
+        margin: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    :root {
+        --picAnimSc: 60vh;
+    }
+
+    .container2 {
+        justify-content: center;
+        padding-right: 0;
+        padding-top: 20vh;
+    }
+
+    .container2 p {
+        font-size: 0.8rem;
+        max-width: 85%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .spotify :nth-child(odd) {
+        min-width: 70vw;
+        height: auto;
+        max-height: 70%;
+    }
+
+    .spotify :nth-child(even) {
+        min-width: 70vw;
+        max-height: 20%;
+    }
+
+    .container4 {
+        height: 150vh;
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        --picAnimSc: 45vh;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .container4 {
+        height: 100vh;
+    }
+
+    .minecraft h2 {
+        font-size: 0.9rem;
+    }
+
+    .container5 {
+        height: 130vh;
+    }
+}
+
+@media (max-width: 300px) {
+    .container5 {
+        height: 150vh;
+    }
+}
